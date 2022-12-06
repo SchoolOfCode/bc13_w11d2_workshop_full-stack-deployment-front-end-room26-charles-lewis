@@ -50,10 +50,19 @@ function App() {
     setList((previous) => [...previous, listItemWithId]);
   }
 
-  function clearList() {
+  async function clearList() {
     //This function clears all the items that have been added to the list.
-    const clearedList = [];
-    setList(clearedList);
+    // const clearedList = [];
+    // setList(clearedList)
+    const response = await fetch(`${url}/items`, {
+      method: "DELETE",
+      headers: { "Content-Type": "application/json" },
+    });
+    const confirmation = await response.json();
+    if (confirmation.success === true){
+      const clearedList = [];
+      setList(clearedList);
+    }
   }
 
   function tickItem(idOfTickedItem) {
