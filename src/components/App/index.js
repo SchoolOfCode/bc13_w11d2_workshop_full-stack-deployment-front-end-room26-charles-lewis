@@ -10,7 +10,7 @@ and clear all of the items in a list.
 
 //const url = process.env.REACT_APP_BACKEND_URL ?? "http://localhost:3000";
 
-const url = "https://lewischarlesbackend.onrender.com"
+const url = "https://first-backend-attempt.onrender.com"
 
 function App() {
   const [list, setList] = useState([]);
