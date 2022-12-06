@@ -12,6 +12,10 @@ const url = process.env.REACT_APP_BACKEND_URL ?? "http://localhost:3000";
 
 //const url = "https://first-backend-attempt.onrender.com"
 
+export function sum(a, b) {
+  return a + b;
+}
+
 function App() {
   const [list, setList] = useState([]);
 
